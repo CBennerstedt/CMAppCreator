@@ -1,0 +1,42 @@
+-- Pre-reqs --
+If app is running under service-account, make sure service-account has write access to eventlog.log for logging of actions when creating applications
+-----------------
+
+--- What does the app do? ---
+Creates applications into an existing MEMCM environment, including deployment types, requirement rules and detection method, making sure new Applications are created the same way according to settings made in the web.config file
+The app will import found .ico files or .png to be used as icons for the created app later on, it can also import icons from .exe files if selected in the GUI.
+The app has detection if source folder contains PSADT toolkit and input correct install, uninstall and repair commands.
+It will also detect MSI files and import product codes and relevant properties and set install, uninstall and repair commands.
+-----------------
+
+--- Regarding deployment types ---
+The app will create script deployment type if PSADT is detected, and MSI deployment type if MSI is detected
+In the User Experience Tab, by default "Whether or not a user is logged on" is selected, installation behaviour is "Install for System" and "Allow users to view and interact with the program installation" is unticked. This can be altered by user in the GUI before creating the app.
+-----------------
+
+--- Regarding requirement rules ---
+2 rules will be added to deployment type:
+- disk requirement rule, which is based on the choosen content path where the size will be checked by the app and it will double that and set rule requiring greater than or equal to that size.
+- primary user rule will also be added. Note: It is only active when deployed to user collections and can be removed afterwards if you'd like.
+-----------------
+
+--- Regarding detection ----
+User can select to use MSI product code, or powershell script.
+If a user selects an MSI file, the product code will be automatically populated.
+For powershell detection, a sample script is provided in the GUI that can be modified
+-----------------
+
+--- Where are created applications stored? ---
+If the web.config settings contains a specified folder, it will try to move the app to specified folder, otherwise they will be placed in the root folder
+-----------------
+
+-- How do I create an application with the GUI? ---
+The design is to go from top to bottom (single page functionality)
+1. At the top there is a "browser" where folders can be navigated.
+2. When a suitable source folder is found, click "Set content Path", which will populate the content path box for you (and install, uninstall and repair commands if folder contains PSADT toolkit or MSI file only), and prepare disk requirement rule based on size.
+2a. If PSADT toolkit is found in source folder, the install, uninstall and repair commands will be filled in for you.
+3a. If source folder contains MSI file, you need to click the MSI file to import properties, and product code will be set for you. A button to show all MSI properties will also be enabled at this time.
+4. Type in admin description
+5. Type in Description for end users (this is what will be presented in software center for end users)
+5a. Optional - You can click user categories to select one or more categories for this application
+6. Settings - These are extra options giving you opportunity to distribute it once created, deploy it to a selected collection, and enable repair and / or admin approval
