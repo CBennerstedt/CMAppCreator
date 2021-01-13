@@ -20,6 +20,9 @@ Note: I the author have used the app in production and tested it in a few differ
 - Sets custom security scope for the application if configured to do so
 - Rudimentary logging included
 
+### Preview of the app in action below:
+![](CMAppCreatorDemo.gif)
+
 ## Supported Configurations
 This app has been built to support the following versions of Microsoft Endpoint Configuration Manager:
 
@@ -80,7 +83,7 @@ To successfully run this web app, you'll need to have IIS installed on a member 
  - <b>UNCPath</b> FQDN path to your UNC file share containing source files
  - <b>CMAppFolder</b> Folder in ConfigMgr where to move created applications (if omitted apps are created in root folder)
  - <b>SecurityScope</b> A custom security scope ID (if omitted default scope is used)
- - <b>FolderNameDetection</b> Folder pattern (trigger) when "Set Content Folder" button should be visible, i.e. if you have folders named inst_r1, inst_r2 containing the source files and so on you set the name inst_ (if omitted "Set Content Folder" button is always visible except for the root folder in UNC path
+ - <b>FolderNameDetection</b> Folder pattern (trigger) when "Set Content Path" button should be visible, i.e. if you have folders named inst_r1, inst_r2 containing the source files and so on you set the name inst_ (if omitted "Set Content Path" button is always visible except for the root folder in UNC path
  - <b>CollectionPrefix</b> A prefix for user collections i.e. setting it to "Test" will only display collections starting with that name (if omitted all user collections are displayed)
  - <b>DefaultLanguage</b> Language set for deployment type and language set in the Software Center tab, i.e en-US
  - <b>DisplayContactAndExecutionTime</b> Show or hide the section containing app owner, app contact and estimated execution time, valid values are True or False
