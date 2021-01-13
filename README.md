@@ -73,4 +73,16 @@ To successfully run this web app, you'll need to have IIS installed on a member 
 
 ### 6 - Set Application Settings
 1. Edit <b>web.config</b> and locate CM_App_Creator.Properties.Settings.
-2. Enter values for each application settings, <b>SiteServer</b> being the server where the SMS Provider is installed, <b>SiteCode</b> being the site code of your site, <b>DPGroupName</b> being the DP Group you want to send content to, <b>UNCPath</b> being the FQDN path to your UNC file share containing source files, <b>CMAppFolder</b> being folder in ConfigMgr where to move created applications, if omitted apps are created in root folder, <b>SecurityScope</b> being a custom security scope ID if omitted default scope is used, <b>FolderNameDetection</b> being setting for when "Set Content Folder" button lights up, i.e. if you have folders named inst_r1, inst_r2 containing the source files and so on you set the name inst_. If omitted "Set Content Folder" button is always enabled except for the root folder in UNC path, <b>CollectionPrefix</b> being a prefix for user collections i.e. Test will only display collections starting with that name, if omitted all user collections are displayed, <b>DefaultLanguage</b> being language set for deployment type and language set in the Software Center tab, i.e en-US, <b>DisplayContactAndExecutionTime</b> being if the section containing app owner, app contact and estimated execution time should be displayed, valid values are True or False, <b>AddBranding</b> enables branding for deployment type, <b>BrandingText</b> the actual text that is branded in comments for deployment type.
+2. Enter values for each application settings: 
+ - <b>SiteServer</b> The server where the SMS Provider is installed
+ - <b>SiteCode</b> The site code of your site
+ - <b>DPGroupName</b> DP Group you want to send content to
+ - <b>UNCPath</b> FQDN path to your UNC file share containing source files
+ - <b>CMAppFolder</b> Folder in ConfigMgr where to move created applications (if omitted apps are created in root folder)
+ - <b>SecurityScope</b> A custom security scope ID (if omitted default scope is used)
+ - <b>FolderNameDetection</b> Folder pattern (trigger) when "Set Content Folder" button should be visible, i.e. if you have folders named inst_r1, inst_r2 containing the source files and so on you set the name inst_ (if omitted "Set Content Folder" button is always visible except for the root folder in UNC path
+ - <b>CollectionPrefix</b> A prefix for user collections i.e. setting it to "Test" will only display collections starting with that name (if omitted all user collections are displayed)
+ - <b>DefaultLanguage</b> Language set for deployment type and language set in the Software Center tab, i.e en-US
+ - <b>DisplayContactAndExecutionTime</b> Show or hide the section containing app owner, app contact and estimated execution time, valid values are True or False
+ - <b>AddBranding</b> Enables branding for deployment type
+ - <b>BrandingText</b> The actual text that is to be set in comments for deployment type.
