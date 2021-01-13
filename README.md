@@ -1,8 +1,8 @@
 # CMAppCreator
 
 CMAppCreator's purpose is to add applications to a MEMCM/ConfigMgr environment in a standardized way, with minimal work effort (minimize on clicking dialogs present in the full adminconsole) and through a web app GUI. (yes I am fully aware of GUI's people have made in powershell and other tools which this does not replace, only add to the eco-system and giving something back to the ConfigMgr community :) )
-The idea is to create a first test release of an application, meaning distribute, set certain common settings and deploy to a test user collection for immediate testing if wanted.
-Scenarios for usage is a group responsible for managing MEMCM/ConfigMgr obviously, but also to let departments that are not comfortable using the full console experience i.e. servicedesk/helpdesk. You can even use a smartphone for doing this task due to the app being mobile friendly :)
+The idea is to be able to quickly create a first test release of an application, meaning distribute, set certain common settings and deploy to a test user collection for immediate testing if wanted.
+Scenarios for usage is a group responsible for managing MEMCM/ConfigMgr obviously, but also to let departments that are not comfortable using the full console experience i.e. servicedesk/helpdesk, or using it for some external party perhaps. You can even use a smartphone for doing this task due to the app being mobile friendly :)
 The app impersonates the calling user (except for UNC file access) so make sure RBAC is configured correctly in MEMCM/ConfigMgr.
 
 Note: I the author have used the app in production and tested it in a few different environments but I recommend you test it in your test environment first. I have also tried to do some error handling and squash some bugs but it can probably improve..
