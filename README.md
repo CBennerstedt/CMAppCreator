@@ -41,7 +41,15 @@ To successfully run this web app, you'll need to have IIS installed on a member 
 3. Copy the compiled <b>CM App Creator.dll</b> to <b>C:\inetpub\CMAppCreator\bin</b>.
 4. Rename Web.Release.config to <b>Web.config</b> and copy it to <b>C:\inetpub\ConfigMgrWebService</b>.
 5. Copy <b>ConfigMgrWebService.asmx</b> to <b>C:\inetpub\ConfigMgrWebService</b>.
-6. Locate <b>AdminUI.AppManFoundation.dll</b>, <b>AdminUI.DcmObjectWrapper.dll</b>, <b>AdminUI.FeaturesUtilities.dll</b>, <b>AdminUI.WqlQueryEngine.dll</b>, <b>Microsoft.ConfigurationManagement.ApplicationManagement.dll</b>, <b>Microsoft.ConfigurationManagement.ApplicationManagement.MsiInstaller.dll</b>, <b>Microsoft.ConfigurationManagement.ManagementProvider.dll</b> and <b>Microsoft.ConfigurationManager.CommonBase.dll</b> in the ConfigMgr console installation location and copy them to <b>C:\inetpub\ConfigMgrWebService\bin</b>.
+6. Locate below files from your ConfigMgr admin-console installation location and copy them to <b>C:\inetpub\CMAppCreator\bin</b>.
+  - <b>AdminUI.AppManFoundation.dll</b>
+  - <b>AdminUI.DcmObjectWrapper.dll</b>
+  - <b>AdminUI.FeaturesUtilities.dll</b>
+  - <b>AdminUI.WqlQueryEngine.dll</b>
+  - <b>Microsoft.ConfigurationManagement.ApplicationManagement.dll</b>
+  - <b>Microsoft.ConfigurationManagement.ApplicationManagement.MsiInstaller.dll</b>
+  - <b>Microsoft.ConfigurationManagement.ManagementProvider.dll</b>
+  - <b>Microsoft.ConfigurationManager.CommonBase.dll</b>
 
 ### 2 - Add an Application Pool in IIS
 1. Open IIS management console, right click on <b>Application Pools</b> and select Add Application Pool.
