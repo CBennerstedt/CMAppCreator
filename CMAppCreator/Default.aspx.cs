@@ -126,8 +126,11 @@ namespace CM_App_Creator
                     ((System.Security.Principal.WindowsIdentity)User.Identity).Impersonate();
                 WqlConnectionManager connectionManager = smsProvider.Connect(_siteServerName);
                 impersonationContext.Undo();
-                connectionManager.Dispose();
-                results = true;
+                if (connectionManager !=null)
+                {
+                    connectionManager.Dispose();
+                    results = true;
+                }
             }
             catch (Exception ex)
             {
