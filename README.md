@@ -10,8 +10,9 @@ Note: I the author have used the app in production and tested it in a few differ
 ### Features overview
 
 - Powershell App Deployment Tool detection (sets install, uninstall and repair commands automatically when configured source folder contains the PSADT toolkit)
-- MSI integration (extracts Productkey automatically and sets detection), full list of MSI properties also extracted and can be viewed
+- MSI integration (extracts Productkey automatically and sets detection), extracts product name, manufacturer and product version and inserts them in the GUI (also, full list of MSI properties also presented and can be viewed separately)
 - Extracts icons from EXE files if selected (for usage in software center to end users) and automatically resizes the icon to fit
+- Extracts file properties from EXE when selected and tries to pickup manufacturer, product name and version and input them automatically
 - Imports .ICO or .PNG files automatically if encountered when selecting source folders from configured UNC path for usage in software center to end users
 - Optional: Distributes application to configured DP Group, deploys to selected user collection, possible to set as interactive for deployment type, and enable repair and admin approval for deployment
 - Detection methods (MSI and powershell supported)
@@ -76,7 +77,10 @@ To successfully run this web app, you'll need to have IIS installed on a member 
 3. Add Allow Rule
 4. Select <b>Specified roles or user groups</b> and enter name of AD group
 
-### 6 - Set Application Settings
+### 6 - Enable write rights to logfile for ServiceAccount
+Locate the file Eventlog.log, and make sure the service acccount has write access to it
+
+### 7 - Set Application Settings
 1. Edit <b>web.config</b> and locate CM_App_Creator.Properties.Settings.
 2. Enter values for each application settings: 
  - <b>SiteServer</b> The server where the SMS Provider is installed
