@@ -39,8 +39,8 @@ For the backend, WiX toolset SDK DLLs is used for MSI integration, and a couple 
 To successfully run this web app, you'll need to have IIS installed on a member server with ASP.NET enabled, .NET Framework 4.7.2 or higher and internet connectivity for downloading of Bootstrap4/jQuery/fontawesome libraries from their CDNs. Easiest way to get going is to install CMAppCreator on the same server where your Management Point role is hosted. You'll also need to have a service account for the application pool in IIS. The service account requires no rights in MEMCM/ConfigMgr, only read-access to the UNC file share for source files.
 
 ### 1 - Create folder structure
-Option 1: Download the project (goto Project -> Manage Nuget Packages and then click to Restore packages), set a valid path for the referenced ConfigMgr DLLs under References in the file structure (point 3) and compile and publish the solution in Visual Studio (you can download the free version called Visual Studio Community Edition)
-Option 2: Download the release zip file
+ - Option 1: Download the project (goto Project -> Manage Nuget Packages and then click to Restore packages), set a valid path for the referenced ConfigMgr DLLs under References in the file structure (point 3) and compile and publish the solution in Visual Studio (you can download the free version called Visual Studio Community Edition)
+ - Option 2: Download the release zip file
 2. Create a folder in <b>C:\inetpub</b> called <b>CMAppCreator</b>. Inside that folder, copy the files that you published from Visual Studio (or downloaded from releases).
 3. Locate below files from your ConfigMgr admin-console installation location and copy them to <b>C:\inetpub\CMAppCreator\bin</b>.
   - <b>AdminUI.AppManFoundation.dll</b>
