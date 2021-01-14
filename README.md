@@ -18,7 +18,7 @@ Note: I the author have used the app in production and tested it in a few differ
 - Requirements rules (disk requirement rule is automatically calculated on selected source folder and doubles it), also configures estimated execution time based on this. Primary user rule added as well
 - Possible to set administrative categories and also set one or more user categories directly
 - Sets custom security scope for the application if configured to do so
-- Search functionality (you can search ConfigManager for any existing applications based on application title, or do a quick google search displayed in a popup window via buttons)
+- Search functionality (you can search ConfigManager via the search button for any existing applications based on app name field, or do a quick google search based on app name field displayed in a popup window via the search button)
 - Rudimentary logging included
 
 ### Preview of the app in action below:
